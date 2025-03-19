@@ -1,0 +1,42 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 2048MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: superuser
+    password: "SuperPass@123"
+    url: jdbc:mysql://192.168.200.103:3306/speech_to_text?allowPublicKeyRetrieval=true&useSSL=false&useLegacyDatetimeCode=false
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+      
+storage:
+  location: 'C:/Users/ghita/Documents/Projects/speachToText-BE/AUDIO_FILES/'
+
+
+jwt:
+  secret: $2a$10$QGTTE3XfikkyUSdiICD3iusHFowvQ28mf.mEzezy6/FswcrhCgmJi
+  authorities: 
+    key: role
+
+paths:
+  pythonTranscribeUrl: 'http://192.168.200.102:5000/transcribe'
+  pythonGenerateDocumentUrl: 'http://192.168.200.102:5000/generate-document'
+
+ffmpegPath: 'C:/Users/ghita/OneDrive/Desktop/ffmpeg-2023-02-16-git-aeceefa622-full_build/bin/ffmpeg.exe'
+
+
+
