@@ -9,8 +9,8 @@ spring:
       max-request-size: 2048MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: superuser
-    password: "SuperPass@123"
+    username: user
+    password: "password"
     url: jdbc:mysql://192.168.200.103:3306/speech_to_text?allowPublicKeyRetrieval=true&useSSL=false&useLegacyDatetimeCode=false
   jpa:
     defer-datasource-initialization: true
@@ -24,11 +24,11 @@ spring:
       matching-strategy: ant-path-matcher
       
 storage:
-  location: 'C:/Users/ghita/Documents/Projects/speachToText-BE/AUDIO_FILES/'
+  location: 'C:/AUDIO_FILES/'
 
 
 jwt:
-  secret: $2a$10$QGTTE3XfikkyUSdiICD3iusHFowvQ28mf.mEzezy6/FswcrhCgmJi
+  secret: $secret
   authorities: 
     key: role
 
@@ -36,7 +36,7 @@ paths:
   pythonTranscribeUrl: 'http://192.168.200.102:5000/transcribe'
   pythonGenerateDocumentUrl: 'http://192.168.200.102:5000/generate-document'
 
-ffmpegPath: 'C:/Users/ghita/OneDrive/Desktop/ffmpeg-2023-02-16-git-aeceefa622-full_build/bin/ffmpeg.exe'
+ffmpegPath: 'C:/ffmpeg.exe'
 
 
 
