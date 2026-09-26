@@ -1,2 +1,2 @@
-# Speech to text MAI - BE
+# Speech to text - BE
 # test automatic deploy
